@@ -110,7 +110,7 @@ public abstract class BucketListAdapter<T> extends ArrayAdapter<T> {
         } else {
             bucket = new LinearLayout(ctx);
             bucket.setLayoutParams(new AbsListView.LayoutParams(
-                    AbsListView.LayoutParams.FILL_PARENT, AbsListView.LayoutParams.WRAP_CONTENT));
+                    AbsListView.LayoutParams.MATCH_PARENT, AbsListView.LayoutParams.WRAP_CONTENT));
             bucket.setOrientation(LinearLayout.HORIZONTAL);
             
             if (DEBUG) {
@@ -147,7 +147,7 @@ public abstract class BucketListAdapter<T> extends ArrayAdapter<T> {
             } else {
                 bucketElementFrame = new FrameLayout(ctx);
                 bucketElementFrame.setLayoutParams(new LinearLayout.LayoutParams(0,
-                        LinearLayout.LayoutParams.FILL_PARENT, 1));
+                        LinearLayout.LayoutParams.MATCH_PARENT, 1));
                 
                 if (i < super.getCount()) {
                     View current = getBucketElement(i, getItem(i), null);
